@@ -18,5 +18,4 @@ containers.
 ---
 # License
 
-This code is licensed under Apache v2.0 with the exception of JQ which is
-covered by the MIT license (see [COPYING_JQ](glfs-subvol/COPYING_JQ)).
+This code is licensed under Apache v2.0.
