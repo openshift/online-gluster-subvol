@@ -1,12 +1,14 @@
 # Installation of flex volume plugin
 
 This is a flex volume plugin that needs to be installed on each Kubernetes node.
-Included in this directory is an ansible playbook (`install_plugin.yml`) that
-performs the install. This playbook:
-* Creates the directory for the plugin:
-`/usr/libexec/kubernetes/kubelet-plugins/volume/exec/rht~glfs-subvol`
-* Copies both the plugin script `glfs-subvol` and the `jq` binary to that
-directory.
+The plugin script should be installed as:
+`/usr/libexec/kubernetes/kubelet-plugins/volume/exec/rht~glfs-subvol/glfs-subvol`
+
+The script has dependencies on:
+* glusterfs
+* glusterfs-fuse
+* jq
+* which
 
 Upon first install, it may be necessary to restart kubelet for it to find the
 plugin.
